@@ -22,6 +22,7 @@
         <module>thread-pool</module>
         <module>thread-safe</module>
         <module>thread-project-practice</module>
+        <module>thread-demo</module>
     </modules>
 
 
