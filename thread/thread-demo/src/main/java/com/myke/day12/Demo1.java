@@ -1,13 +1,15 @@
-package com.myke.day10;
+package com.myke.day12;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * 线程不安全的
+ * synchronized
+ *
+ * @author: zh
+ * @date: 2020/4/25/025 12:34
  */
 @Slf4j
 public class Demo1 {
-
 
     public static void main(String[] args) throws InterruptedException {
         T1 t1 = new T1("thread-1");
@@ -32,7 +34,7 @@ public class Demo1 {
     static int num = 0;
 
     // 方法加 synchronized 则是线程安全的
-    public static void m1() {
+    public synchronized static void m1() {
         for (int i = 0; i < 100000; i++) {
             num++;
         }
