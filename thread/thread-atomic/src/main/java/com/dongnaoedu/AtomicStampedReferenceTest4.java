@@ -30,13 +30,13 @@ public class AtomicStampedReferenceTest4 {
             @Override
             public void run() {
                 //todo:这里应该重新获取版本戳，才能更新成功
-                //int stamp2 = atomicStampedReference.getStamp();
+                int stamp2 = atomicStampedReference.getStamp();
 
                 Integer reference = atomicStampedReference.getReference();
                 System.out.println(Thread.currentThread().getId() + ":"
-                        + reference + "-" + stamp + "-" +
+                        + reference + "-" + stamp2 + "-" +
                         // 这里会检查版本戳，现在的版本本戳已经是 1 了，但拿到的版本戳却是 0 ，所以修改失败，返回false
-                        atomicStampedReference.compareAndSet(reference, reference + 10, stamp, stamp + 1));
+                        atomicStampedReference.compareAndSet(reference, reference + 10, stamp2, stamp2 + 1));
             }
         });
 
