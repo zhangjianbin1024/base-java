@@ -8,6 +8,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * InheritableThreadLocal 使用
+ */
 public class Demo4 {
 
     //创建一个操作Thread中存放请求任务追踪id口袋的对象
