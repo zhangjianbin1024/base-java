@@ -1,13 +1,14 @@
 package com.example.jdk18demo;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static java.util.Arrays.asList;
 
 public class ComparableTest {
 
     public static void main(String[] args) {
-        List<Cat> catList = Arrays.asList(new Cat("liming", 90),
+        List<Cat> catList = asList(new Cat("liming", 90),
                 new Cat("xiaohong", 95),
                 new Cat("zhoubin", 88),
                 new Cat("xiaoli", 94)
